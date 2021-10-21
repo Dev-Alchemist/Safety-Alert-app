@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "959990072900",
+    "project_id": "student-safety-f1151",
+    "storage_bucket": "student-safety-f1151.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:959990072900:android:2cfb87ff492e4610145e11",
+        "android_client_info": {
+          "package_name": "com.example.students_safety_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "959990072900-7goc9ovjbnam89hikm60h4vrtn54gag4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwIQGsrNEUIdHyJpew3IEwSv79Yj-yb_M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "959990072900-7goc9ovjbnam89hikm60h4vrtn54gag4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
