@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:students_safety_app/services/auth.dart';
+import 'package:students_safety_app/shared/loading.dart';
 
 class SignIn extends StatefulWidget {
   const SignIn({Key? key}) : super(key: key);
@@ -9,9 +10,12 @@ class SignIn extends StatefulWidget {
 }
 
 class _SignInState extends State<SignIn> {
+
+  bool loading = false;
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return loading ? Loading() : Scaffold(
       appBar: AppBar(
         centerTitle: true,
         title: Column(
@@ -33,6 +37,7 @@ class _SignInState extends State<SignIn> {
                     minimumSize: Size(double.infinity, 50)
                   ),
                   onPressed: () {
+                    setState(() => loading = true);
                     AuthMethods().signInWithGoogle(context);
                   },
                   child: Text("Sign In With Google"),

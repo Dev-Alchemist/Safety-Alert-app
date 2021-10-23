@@ -5,8 +5,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:students_safety_app/helper_functions/shared_preferences.dart';
+import 'package:students_safety_app/shared/SnackBarWidget.dart';
 import 'package:students_safety_app/views/home.dart';
-import 'package:students_safety_app/widgets/SnackBarWidget.dart';
 
 class AuthMethods {
 
@@ -49,7 +49,7 @@ class AuthMethods {
           MaterialPageRoute(builder: (context) => Home()));
          ScaffoldMessenger.of(context).showSnackBar(
            SnackBarWidget.customSnackBar(content:
-           'Signed in as ${userDetails.displayName}'),
+           'Signed in as ${userDetails.displayName!.toUpperCase()}'),
          );
 
       return userDetails;
