@@ -31,7 +31,6 @@ dependencies:
   firebase_auth:
   google_sign_in:
   cloud_firestore:
-  fluttertoast:
   shared_preferences:
 
 dev_dependencies:
