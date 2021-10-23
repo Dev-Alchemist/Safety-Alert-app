@@ -5,6 +5,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:students_safety_app/helper_functions/shared_preferences.dart';
 import 'package:students_safety_app/views/home.dart';
 
 class AuthMethods {
@@ -37,14 +38,20 @@ class AuthMethods {
 
       User? userDetails = result.user;
 
+        // save user info and then send to Home screen
+        SharedPreferenceHelper.saveUserLoggedInStatus(true);
+        SharedPreferenceHelper.saveUserEmailKey(userDetails!.email);
+        SharedPreferenceHelper.saveUserNameKey(userDetails.displayName);
+        SharedPreferenceHelper.saveUserProfilePicKey(userDetails.photoURL);
+        SharedPreferenceHelper.saveUserUIDKey(userDetails.uid);
+
       Navigator.pushReplacement(context,
           MaterialPageRoute(builder: (context) => Home()));
-      Fluttertoast.showToast(msg: "Signed in as ${userDetails!.displayName}");
+      Fluttertoast.showToast(msg: "Signed in as ${userDetails.displayName}");
 
       return userDetails;
     } catch (e){
       log(e.toString());
-      Fluttertoast.showToast(msg: "Network Error! Please try later.");
       return null;
 
     }
