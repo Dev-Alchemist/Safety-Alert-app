@@ -15,6 +15,7 @@ class _SignInState extends State<SignIn> {
 
   @override
   Widget build(BuildContext context) {
+    Size size =MediaQuery.of(context).size;
     return loading ? Loading() : Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -30,19 +31,46 @@ class _SignInState extends State<SignIn> {
           children: [
             Padding(
                 padding: EdgeInsets.only(top: 100.0),
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    primary: Colors.white,
-                    onPrimary: Colors.black,
-                    minimumSize: Size(double.infinity, 50)
-                  ),
+                child: Image(
+                  image: AssetImage(
+                      "assets/happy.jpg"),
+                  height: size.height * 0.35,
+                ),
+            ),
+            Container(
+              margin: const EdgeInsets.only(top: 150.0),
+              width: 300,
+              child: ButtonTheme(
+                buttonColor: Colors.white,
+                child: RaisedButton(
                   onPressed: () {
-                    setState(() => loading = true);
                     AuthMethods().signInWithGoogle(context);
                   },
-                  child: Text("Sign In With Google"),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(35.0),
+                  ),
+                  child: Row(children: [
+                    Padding(
+                      padding: const EdgeInsets.only(top: 13, right: 17, bottom: 13, left: 7),
+                      child: Image(
+                        image: AssetImage(
+                          "assets/google.jpg"
+                        ),
+                        height: size.height * 0.05,
+                      )
+                    ),
+                    Text(
+                      "Sign In with Google",
+                      style: TextStyle(
+                        color: Colors.blue,
+                        fontWeight: FontWeight.w700,
+                        fontSize: 21,
+                      ),
+                    ),
+                  ]),
                 ),
-            )
+              ),
+            ),
           ],
         ),
       ),

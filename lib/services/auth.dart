@@ -60,5 +60,15 @@ class AuthMethods {
     }
   }
 
+  Future signOut() async {
+    try {
+      // remove shared pref
+      SharedPreferenceHelper.clearData();
+      return await _auth.signOut();
+    } catch (e) {
+      log(e.toString());
+    }
+  }
+
 
 }

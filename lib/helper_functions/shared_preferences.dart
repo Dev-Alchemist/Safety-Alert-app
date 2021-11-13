@@ -59,4 +59,10 @@ class SharedPreferenceHelper {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     return prefs.getString(userProfilePicKey);
   }
+
+  // clear
+  static clearData() async {
+    SharedPreferences prefs =await SharedPreferences.getInstance();
+    return await prefs.clear();
+  }
 }
