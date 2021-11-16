@@ -19,7 +19,7 @@ class AuthMethods {
 
   // sign in with google
   Future<User?> signInWithGoogle(BuildContext context) async {
-    log("Trying to login with google");
+    log("Trying to log in");
 
     final GoogleSignIn _googleSignIn = new GoogleSignIn();
 
@@ -49,7 +49,7 @@ class AuthMethods {
           MaterialPageRoute(builder: (context) => Home()));
          ScaffoldMessenger.of(context).showSnackBar(
            SnackBarWidget.customSnackBar(content:
-           'Signed in as ${userDetails.displayName!.toUpperCase()}'),
+           'Signed in as ${userDetails.displayName!}'),
          );
 
       return userDetails;
