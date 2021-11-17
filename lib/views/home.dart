@@ -141,25 +141,23 @@ class _HomeState extends State<Home> {
             Padding(
                 padding: EdgeInsets.only(top: 40.0, right: 60, left: 60),
                 child: ElevatedButton(
-                  child: Expanded(
                   child: Row(
-                      children: [
-                        Padding(padding: EdgeInsets.only
-                          (left: 30.0, top: 8, bottom: 8, right: 8),
-                          child: Image.asset("assets/add_alert.jpg",
-                          height: size.height * 0.05,
-                            color: Colors.white,
-                          ),
-                        ),
-                        Text("Add",
-                        style: TextStyle(
+                    children: [
+                      Padding(padding: EdgeInsets.only
+                        (left: 30.0, top: 8, bottom: 8, right: 8),
+                        child: Image.asset("assets/add_alert.jpg",
+                        height: size.height * 0.05,
                           color: Colors.white,
-                          fontWeight: FontWeight.w400,
-                          fontSize: 21
                         ),
-                        )
-                      ],
-                    ),
+                      ),
+                      Text("Add",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.w400,
+                        fontSize: 21
+                      ),
+                      )
+                    ],
                   ),
                   onPressed: () {
                     },
