@@ -33,6 +33,13 @@ dependencies:
   cloud_firestore:
   shared_preferences:
   flutter_spinkit:
+  sqflite:
+  contacts_service:
+  permission_handler:
+  telephony:
+  geolocator:
+  geocoding:
+  fluttertoast:
 
 
 dev_dependencies:
