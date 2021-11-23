@@ -10,14 +10,14 @@ class SignIn extends StatefulWidget {
 }
 
 class _SignInState extends State<SignIn> {
-  bool loading = false;
+
 
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return loading
-        ? Loading()
-        : Scaffold(
+    return
+
+         Scaffold(
             appBar: AppBar(
               centerTitle: true,
               title: Column(
@@ -43,7 +43,7 @@ class _SignInState extends State<SignIn> {
                         buttonColor: Colors.white,
                         child: RaisedButton(
                           onPressed: () {
-                            setState(() => loading = true);
+
                             AuthMethods().signInWithGoogle(context);
                           },
                           shape: RoundedRectangleBorder(
