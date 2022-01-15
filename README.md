@@ -1,7 +1,7 @@
 # students_safety_app
 
 
-## Under Development
+## Coming soon
 
 ### This is an application used for sending alerts to desired phone contacts incase one assumes they are in trouble.
 
